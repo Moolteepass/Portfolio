@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Reset and default styles */
+#root {
+  --Primary-Font: "Montserrat", sans-serif;
+  --Primary-Font-Weight: 500;
+}
+
+h1,
+h2,
+h3,
+body,
+html,
+div,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Primary-Font);
+  font-weight: var(--Primary-Font-Weight);
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Full App Styles */
+.Full-App {
+  display: flex;
+}
+
+/* Sidebar styles */
+.Sidebar-Main {
+  width: 25%;
+  min-height: 100vh;
+  background: gray;
+}
+
+.Sidebar-Title-Container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 8px;
+}
+
+.Sidebar-Logo {
+  height: 70px;
+  width: auto;
+}
+
+.Sidebar-Website-Title {
+  margin-left: 10px;
+}
+
+/* Navbar styles */
+.Navbar {
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.Navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Navbar li {
+  margin-bottom: 20px;
+}
