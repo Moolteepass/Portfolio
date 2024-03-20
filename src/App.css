@@ -38,7 +38,7 @@ img {
 
 /* Sidebar styles */
 .Sidebar-Main {
-  width: 25%;
+  width: 200px;
   min-height: 100vh;
   background: gray;
 }
