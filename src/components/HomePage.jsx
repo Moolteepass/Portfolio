@@ -1,12 +1,9 @@
-import PhotoStack from "./PhotoStack"
+import Carousel from "./Carousel"
 
 const HomePage = () => {
   return (
-    <div className="Group-Photostack">
-      <PhotoStack />
-      <PhotoStack />
-      <PhotoStack />
-      <PhotoStack />
+    <div className="HomePage-Main">
+      <Carousel />
     </div>
   )
 }

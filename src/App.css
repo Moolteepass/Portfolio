@@ -3,7 +3,7 @@
 /* Reset and default styles */
 #root {
   --Primary-Font: "Montserrat", sans-serif;
-  --Primary-Font-Weight: 500;
+  --Primary-Font-Weight: 600;
 }
 
 h1,
@@ -23,55 +23,99 @@ input {
 body,
 html {
   height: 100%;
-  font-family: Arial, sans-serif;
-}
-
-img {
-  height: 100%;
-  width: 100%;
 }
 
 /* Full App Styles */
 .Full-App {
   display: flex;
+  position: relative;
+  flex-direction: column;
 }
 
-/* Sidebar styles */
-.Sidebar-Main {
-  width: 200px;
-  min-height: 100vh;
-  background: gray;
+/* Nav styles */
+.Nav-Main {
+  width: 100%;
+  z-index: 1;
+  color: whitesmoke;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.664);
 }
 
-.Sidebar-Title-Container {
+.Nav-Container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-left: 8px;
 }
 
-.Sidebar-Logo {
+.Nav-Logo {
   height: 70px;
+  margin-left: 10px;
   width: auto;
 }
 
-.Sidebar-Website-Title {
-  margin-left: 10px;
-}
-
 /* Navbar styles */
-.Navbar {
-  margin-left: 10px;
-  margin-top: 20px;
-  font-size: 20px;
+.Nav-list {
+  font-size: 16px;
 }
 
-.Navbar ul {
-  margin: 0;
-  padding: 0;
+.Nav-list ul {
+  display: flex;
+  align-items: center;
   list-style: none;
+  padding-left: 10px;
 }
 
-.Navbar li {
-  margin-bottom: 20px;
+.Nav-list ul li {
+  margin-right: 20px;
+}
+
+.Nav-Link {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* Homepage styles */
+.HomePage {
+  position: absolute;
+  top: 0;
+}
+
+.HomePage-Main {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.HomePage-Main img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+/* Slides CSS */
+.Carousel {
+  position: relative; /* Ensure absolute positioning works relative to this container */
+  width: 100%;
+  height: 100%;
+}
+
+.Slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2.5s ease-in-out;
+}
+
+.Slide-Visible {
+  opacity: 1;
+}
+
+.Slide-Hidden {
+  opacity: 0; /* Ensure hidden slides do not occupy space */
 }
