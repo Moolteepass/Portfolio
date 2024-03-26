@@ -93,6 +93,9 @@ p {
 /* Homepage styles */
 .HomePage {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .HomePage-Main {
@@ -137,8 +140,8 @@ p {
 }
 
 .What-I-Do {
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
 }
 
@@ -147,6 +150,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .Skills-Card-Main {

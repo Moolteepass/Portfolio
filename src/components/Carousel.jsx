@@ -12,7 +12,7 @@ const Carousel = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       nextSlide()
-    }, 4000)
+    }, 5500)
 
     return () => clearTimeout(timeoutId) // Clear the timeout when the component unmounts
   })

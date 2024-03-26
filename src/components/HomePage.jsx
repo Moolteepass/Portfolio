@@ -7,7 +7,7 @@ const HomePage = () => {
       <div className="HomePage-Main">
         <Carousel />
       </div>
-      <h1 className="What-I-Do">THE KIND OF WORK I DO</h1>
+      <h1 className="What-I-Do">SKILLS</h1>
       <div className="Skills-Card-All">
         <SkillsCard icon={"faCamera"} />
         <SkillsCard icon={"faClapperboard"} />
