@@ -22,22 +22,38 @@ input {
 
 body,
 html {
+  background: rgb(29, 29, 29);
   height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+p {
+  color: whitesmoke;
+  font-size: 50px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* Full App Styles */
 .Full-App {
   display: flex;
-  position: relative;
   flex-direction: column;
 }
 
 /* Nav styles */
 .Nav-Main {
+  position: fixed;
   width: 100%;
   z-index: 1;
   color: whitesmoke;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.664);
+}
+
+.Nav-With-Background {
+  background-color: rgb(43, 43, 43);
 }
 
 .Nav-Container {
@@ -45,6 +61,7 @@ html {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .Nav-Logo {
@@ -76,16 +93,14 @@ html {
 
 /* Homepage styles */
 .HomePage {
-  position: absolute;
-  top: 0;
+  position: relative;
 }
 
 .HomePage-Main {
+  position: relative;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  position: absolute;
-  top: 0;
 }
 
 .HomePage-Main img {
@@ -97,7 +112,9 @@ html {
 
 /* Slides CSS */
 .Carousel {
-  position: relative; /* Ensure absolute positioning works relative to this container */
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -118,4 +135,10 @@ html {
 
 .Slide-Hidden {
   opacity: 0; /* Ensure hidden slides do not occupy space */
+}
+
+.What-I-Do {
+  margin-top: 20px;
+  margin-left: 20px;
+  color: white;
 }
