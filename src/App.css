@@ -30,7 +30,6 @@ html {
 
 p {
   color: whitesmoke;
-  font-size: 50px;
 }
 
 ::-webkit-scrollbar {
@@ -141,4 +140,34 @@ p {
   margin-top: 20px;
   margin-left: 20px;
   color: white;
+}
+
+/* Skills Card Styles */
+.Skills-Card-All {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Skills-Card-Main {
+  color: whitesmoke;
+  background: rgb(51, 51, 51);
+  border-radius: 20px;
+  height: 200px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Skills-Card-Icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  border: 2px solid rgb(253, 162, 58);
+  font-size: 60px;
+  border-radius: 60px;
 }
