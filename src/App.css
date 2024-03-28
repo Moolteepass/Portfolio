@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
 
 /* Reset and default styles */
 #root {
   --Primary-Font: "Montserrat", sans-serif;
   --Primary-Font-Weight: 600;
+  --Secondary-Font: "Kalam", sans-serif;
 }
 
 h1,
@@ -69,7 +71,6 @@ p {
   width: auto;
 }
 
-/* Navbar styles */
 .Nav-list {
   font-size: 16px;
 }
@@ -83,11 +84,25 @@ p {
 
 .Nav-list ul li {
   margin-right: 20px;
+  transition: transform 0.1s ease;
+}
+
+.Nav-list li:hover {
+  transform: scale(1.1);
 }
 
 .Nav-Link {
   text-decoration: none;
   color: whitesmoke;
+}
+
+/* Footer Styles */
+footer {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 /* Homepage styles */
@@ -110,6 +125,34 @@ p {
   width: 100%;
   object-fit: cover;
   object-position: bottom;
+}
+
+.HomePage-Bio {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  min-height: 500px;
+  height: 600px;
+}
+
+.HomePage-Greeting {
+  color: whitesmoke;
+  font-family: var(--Secondary-Font);
+  font-size: 40px;
+}
+
+.HomePage-Written-Bio {
+  margin-top: 0px;
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.HomePage-Bio img {
+  height: 100%;
+}
+
+.HomePage-Container {
+  width: 60%;
 }
 
 /* Slides CSS */
@@ -140,15 +183,18 @@ p {
 }
 
 .What-I-Do {
-  margin-top: 10px;
+  margin-top: 40px;
   margin-bottom: 10px;
   color: white;
+  font-family: var(--Secondary-Font);
+  font-size: 40px;
 }
 
 /* Skills Card Styles */
 .Skills-Card-All {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -163,6 +209,12 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.Skills-Card-Main:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .Skills-Card-Icon {
@@ -174,4 +226,29 @@ p {
   border: 2px solid rgb(253, 162, 58);
   font-size: 60px;
   border-radius: 60px;
+}
+
+/* Project styles */
+.Project-Container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -2px;
+}
+
+.Project-Container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.Project-Image-Container {
+  width: 25%;
+}
+
+.Project-Image-Container {
+  transition: transform 0.1s ease;
+}
+
+.Project-Image-Container:hover {
+  transform: scale(1.1);
 }

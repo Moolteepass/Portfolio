@@ -12,5 +12,22 @@
     {
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/best/Live-4.webp?timestamp=123456789"
     }
+  ],
+  "project_images": [
+    {
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/3d-design/Cover-Photo.webp"
+    },
+    {
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/automation/Cover-Photo.webp"
+    },
+    {
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp"
+    },
+    {
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/Cover-Photo.webp"
+    },
+    {
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp"
+    }
   ]
 }

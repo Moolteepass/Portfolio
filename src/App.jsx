@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 import HomePage from "./components/HomePage"
+import Projects from "./components/Projects"
 
 const App = () => {
   const [showNavbarBg, setShowNavbarBg] = useState(false)
@@ -67,10 +68,11 @@ const App = () => {
         </aside>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={""} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={""} />
           <Route path="/contact" element={""} />
         </Routes>
+        <footer>Jacob McCormack 2024 ©</footer>
       </div>
     </Router>
   )

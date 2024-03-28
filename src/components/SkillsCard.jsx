@@ -37,7 +37,7 @@ const SkillsCard = ({ icon }) => {
       break
     case "faUnity":
       icon = faUnity
-      text = "3D DESIGN"
+      text = "3D MODELLING"
       break
     default:
       icon = "" // Default icon
