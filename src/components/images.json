@@ -15,18 +15,27 @@
   ],
   "project_images": [
     {
+      "title": "3D DESIGN",
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/3d-design/Cover-Photo.webp"
     },
     {
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/automation/Cover-Photo.webp"
-    },
-    {
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp"
-    },
-    {
+      "title": "PHOTOGRAPHY",
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/Cover-Photo.webp"
     },
     {
+      "title": "VIDEOGRAPHY",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp"
+    },
+    {
+      "title": "AUTOMATION",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/automation/Cover-Photo.webp"
+    },
+    {
+      "title": "WEB DESIGN",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp"
+    },
+    {
+      "title": "GRAPHICS",
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp"
     }
   ]

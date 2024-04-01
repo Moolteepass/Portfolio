@@ -6,7 +6,8 @@ const Projects = () => {
       {project_images.map((item, index) => {
         return (
           <div className="Project-Image-Container" key={index}>
-            <img src={item.src} />
+            <h1 className="Project-Title">{item.title}</h1>
+            <img className="Project-Image" src={item.src} />
           </div>
         )
       })}

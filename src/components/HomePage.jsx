@@ -17,6 +17,11 @@ const HomePage = () => {
           <SkillsCard icon={"faWindows"} />
           <SkillsCard icon={"faCloud"} />
           <SkillsCard icon={"faUnity"} />
+          <SkillsCard icon={"faReact"} />
+          <SkillsCard icon={"faHtml5"} />
+          <SkillsCard icon={"faCss3"} />
+          <SkillsCard icon={"faJs"} />
+          <SkillsCard icon={"faPython"} />
         </div>
         <div className="HomePage-Bio">
           <p className="HomePage-Written-Bio">

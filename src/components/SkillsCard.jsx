@@ -6,7 +6,16 @@ import {
   faCameraRetro,
   faCloud,
 } from "@fortawesome/free-solid-svg-icons"
-import { faAws, faWindows, faUnity } from "@fortawesome/free-brands-svg-icons"
+import {
+  faAws,
+  faWindows,
+  faUnity,
+  faReact,
+  faHtml5,
+  faCss3,
+  faPython,
+  faJs,
+} from "@fortawesome/free-brands-svg-icons"
 
 const SkillsCard = ({ icon }) => {
   let text = ""
@@ -38,6 +47,26 @@ const SkillsCard = ({ icon }) => {
     case "faUnity":
       icon = faUnity
       text = "3D MODELLING"
+      break
+    case "faReact":
+      icon = faReact
+      text = "REACT"
+      break
+    case "faHtml5":
+      icon = faHtml5
+      text = "HTML 5"
+      break
+    case "faCss3":
+      icon = faCss3
+      text = "CSS"
+      break
+    case "faPython":
+      icon = faPython
+      text = "PYTHON"
+      break
+    case "faJs":
+      icon = faJs
+      text = "JAVASCRIPT"
       break
     default:
       icon = "" // Default icon
