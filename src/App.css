@@ -250,6 +250,7 @@ footer {
 .Project-Image:hover {
   transform: scale(1.3) rotate(5deg);
   filter: none;
+  cursor: pointer;
 }
 
 .Project-Image-Overlay {
@@ -272,4 +273,6 @@ footer {
   color: whitesmoke;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-wrap: nowrap;
+  cursor: pointer;
+  pointer-events: none;
 }

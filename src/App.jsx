@@ -1,8 +1,16 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
+import { AnimatePresence } from "framer-motion"
+
 import HomePage from "./components/HomePage"
 import Projects from "./components/Projects"
+import ProjectsPhotography from "./components/ProjectsPhotography"
+import Projects3DDesign from "./components/Projects3DDesign"
+import ProjectsVideography from "./components/ProjectsVideography"
+import ProjectsAutomation from "./components/ProjectsAutomation"
+import ProjectsWebDesign from "./components/ProjectsWebDesign"
+import ProjectsGraphics from "./components/ProjectsGraphics"
 
 const App = () => {
   const [showNavbarBg, setShowNavbarBg] = useState(false)
@@ -37,7 +45,7 @@ const App = () => {
           >
             <img
               className="Nav-Logo"
-              src="https://www.dropbox.com/scl/fi/q4pgpe5ukia0q6v4oqh3n/MonkeyMedia.png?rlkey=3zf7zuxrfqn2r5vogvy1fqazq&raw=1"
+              src="https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/logo/MonkeyMedia.webp"
               alt="Logo"
             />
             <nav className="Nav-list">
@@ -66,12 +74,29 @@ const App = () => {
             </nav>
           </div>
         </aside>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={""} />
-          <Route path="/contact" element={""} />
-        </Routes>
+        <AnimatePresence>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="projects/3D-design" element={<Projects3DDesign />} />
+            <Route
+              path="projects/photography"
+              element={<ProjectsPhotography />}
+            />
+            <Route
+              path="projects/videography"
+              element={<ProjectsVideography />}
+            />
+            <Route
+              path="projects/automation"
+              element={<ProjectsAutomation />}
+            />
+            <Route path="projects/web-design" element={<ProjectsWebDesign />} />
+            <Route path="projects/graphics" element={<ProjectsGraphics />} />
+            <Route path="/about" element={""} />
+            <Route path="/contact" element={""} />
+          </Routes>
+        </AnimatePresence>
         <footer>Jacob McCormack 2024 ©</footer>
       </div>
     </Router>
