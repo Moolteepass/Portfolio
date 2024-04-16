@@ -306,3 +306,102 @@ footer {
   transform: scale(1.05);
   cursor: pointer;
 }
+
+/* Video Project */
+.Video-All {
+  margin-top: 80px;
+  color: whitesmoke;
+}
+
+.Video-Container {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  height: 150px;
+  background: rgb(46, 46, 46);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.Videoplayer-Container {
+  min-width: 200px;
+  width: 300px;
+  max-width: 250px;
+  transition: transform 0.2s ease;
+}
+
+.Videoplayer-Container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.Videoplayer-Container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.Video-Outline {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.Video-Overview {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.637);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.Video-Description {
+  margin-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+/* Contact Styles */
+.Contact-All {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: auto;
+}
+
+.Contact-Image-Container {
+  height: 600px;
+}
+
+.Contact-All img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 5%;
+}
+
+.Contact-Lower {
+  display: flex;
+  height: 400px;
+}
+
+.Contact-Lower iframe {
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+.Contact-Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  background: rgb(46, 46, 143);
+  color: whitesmoke;
+}

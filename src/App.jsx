@@ -6,11 +6,11 @@ import { AnimatePresence } from "framer-motion"
 import HomePage from "./components/HomePage"
 import Projects from "./components/Projects"
 import ProjectsPhotography from "./components/ProjectsPhotography"
-import Projects3DDesign from "./components/Projects3DDesign"
 import ProjectsVideography from "./components/ProjectsVideography"
 import ProjectsAutomation from "./components/ProjectsAutomation"
 import ProjectsWebDesign from "./components/ProjectsWebDesign"
 import ProjectsGraphics from "./components/ProjectsGraphics"
+import Contact from "./components/Contact"
 
 const App = () => {
   const [showNavbarBg, setShowNavbarBg] = useState(false)
@@ -61,11 +61,6 @@ const App = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about" className="Nav-Link">
-                    ABOUT
-                  </Link>
-                </li>
-                <li>
                   <Link to="/contact" className="Nav-Link">
                     CONTACT
                   </Link>
@@ -78,7 +73,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="projects/3D-design" element={<Projects3DDesign />} />
             <Route
               path="projects/photography"
               element={<ProjectsPhotography />}
@@ -93,8 +87,7 @@ const App = () => {
             />
             <Route path="projects/web-design" element={<ProjectsWebDesign />} />
             <Route path="projects/graphics" element={<ProjectsGraphics />} />
-            <Route path="/about" element={""} />
-            <Route path="/contact" element={""} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>
         <footer>Jacob McCormack 2024 ©</footer>
