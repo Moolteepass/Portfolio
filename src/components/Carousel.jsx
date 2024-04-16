@@ -1,42 +1,33 @@
-import { useEffect } from "react"
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react"
 import { slides } from "./images.json"
-import { useState } from "react"
+
+const Slide = ({ item, isActive }) => (
+  <div>
+    <img
+      src={item.src}
+      className={isActive ? "Slide Slide-Visible" : "Slide Slide-Hidden"}
+    />
+  </div>
+)
 
 const Carousel = () => {
   const [slide, setSlide] = useState(0)
 
-  const nextSlide = () => {
-    setSlide(slide === slides.length - 1 ? 0 : slide + 1)
-  }
-
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      nextSlide()
-    }, 5500)
+    const nextSlide = () => {
+      setSlide(slide === slides.length - 1 ? 0 : slide + 1)
+    }
 
-    return () => clearTimeout(timeoutId) // Clear the timeout when the component unmounts
+    const timeoutId = setTimeout(nextSlide, 5500)
+    return () => clearTimeout(timeoutId)
   })
 
   return (
     <div className="Carousel">
-      {slides.map((item, index) => {
-        return (
-          <div key={index}>
-            <img
-              src={item.src}
-              className={
-                slide === index ? "Slide Slide-Visible" : "Slide Slide-Hidden"
-              }
-            />
-            <img
-              src={slides[(index + 1) % slides.length].src}
-              className={
-                slide === index ? "Slide Slide-Visible" : "Slide Slide-Hidden"
-              }
-            />
-          </div>
-        )
-      })}
+      {slides.map((item, index) => (
+        <Slide key={item.id} item={item} isActive={slide === index} />
+      ))}
     </div>
   )
 }

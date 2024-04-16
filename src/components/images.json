@@ -17,32 +17,58 @@
     {
       "title": "3D DESIGN",
       "link": "./3D-design",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/3d-design/Cover-Photo.webp"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/3d-design/Cover-Photo.webp?timestamp=123456789"
     },
     {
       "title": "PHOTOGRAPHY",
       "link": "./photography",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/Cover-Photo.webp"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/Cover-Photo.webp?timestamp=123456789"
     },
     {
       "title": "VIDEOGRAPHY",
       "link": "./videography",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp?timestamp=123456789"
     },
     {
       "title": "AUTOMATION",
       "link": "./automation",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/automation/Cover-Photo.webp"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/automation/Cover-Photo.webp?timestamp=123456789"
     },
     {
       "title": "WEB DESIGN",
       "link": "./web-design",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp?timestamp=123456789"
     },
     {
       "title": "GRAPHICS",
       "link": "./graphics",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/graphics/Cover-Photo.webp?timestamp=123456789"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Showreel",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Video-3.webm?timestamp=123456789"
+    },
+    {
+      "title": "Grave",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Video-1.webm?timestamp=123456789"
+    },
+    {
+      "title": "Driver",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Video-2.webm?timestamp=123456789"
+    },
+    {
+      "title": "Make Better.",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Video-3.webm?timestamp=123456789"
+    },
+    {
+      "title": "MyHaileybury Advert",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Video-3.webm?timestamp=123456789"
+    },
+    {
+      "title": "Life is Fine",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Video-3.webm?timestamp=123456789"
     }
   ]
 }
