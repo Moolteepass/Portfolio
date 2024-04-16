@@ -8,7 +8,9 @@ const HomePage = () => {
     <AnimatedPage>
       <div className="HomePage">
         <div className="HomePage-Main">
-          <Carousel />
+          <div className="fade-in">
+            <Carousel />
+          </div>
         </div>
         <div className="HomePage-Container">
           <h1 className="What-I-Do">SKILLS</h1>
