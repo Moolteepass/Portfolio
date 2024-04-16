@@ -3,10 +3,25 @@ import AnimatedPage from "./AnimatedPage"
 import { Masonry } from "@mui/lab"
 import { Skeleton } from "@mui/lab"
 
+import Dialog from "@mui/material/Dialog"
+import DialogContent from "@mui/material/DialogContent"
+
 const ProjectsPhotography = () => {
   const [randomNumbers, setRandomNumbers] = useState([])
   const [loading, setLoading] = useState(false)
   const [imagesLoaded, setImagesLoaded] = useState(0)
+
+  const [open, setOpen] = useState(false)
+  const [selectedImage, setSelectedImage] = useState(null)
+
+  const handleClickOpen = (image) => {
+    setSelectedImage(image)
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    setOpen(false)
+  }
 
   useEffect(() => {
     const generateRandomNumbers = (max) => {
@@ -46,6 +61,11 @@ const ProjectsPhotography = () => {
                 alt={`Image ${number}`}
                 key={index}
                 onLoad={handleImageLoad}
+                onClick={() =>
+                  handleClickOpen(
+                    `https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/fashion/${number}.jpg`
+                  )
+                }
               />
             ) : (
               <Skeleton
@@ -57,6 +77,20 @@ const ProjectsPhotography = () => {
             )
           )}
         </Masonry>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+          fullWidth={true}
+          maxWidth={"md"}
+        >
+          <DialogContent>
+            <img
+              src={selectedImage}
+              alt=""
+              style={{ width: "100%", height: "auto" }}
+            />
+          </DialogContent>
+        </Dialog>
       </div>
     </AnimatedPage>
   )
