@@ -23,7 +23,7 @@ const ProjectsVideography = () => {
             <div className="Video-Outline">
               <h2>{item.title}</h2>
               <h3 className="Video-Overview">
-                {item.runtime} • {item.tags}
+                {item.runtime} • {item.tags} • {item.role}
               </h3>
               <div className="Video-Description">{item.description}</div>
             </div>

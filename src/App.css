@@ -309,8 +309,10 @@ footer {
 
 /* Video Project */
 .Video-All {
-  margin-top: 80px;
   color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
 }
 
 .Video-Container {
@@ -319,7 +321,7 @@ footer {
   margin-left: 20px;
   margin-bottom: 15px;
   margin-right: 20px;
-  height: 150px;
+  min-height: 150px;
   background: rgb(46, 46, 46);
   padding: 10px;
   border-radius: 10px;
@@ -395,13 +397,22 @@ footer {
   height: 100%;
 }
 
-.Contact-Info {
+.Contact-Pieces {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 50%;
-  background: rgb(46, 46, 143);
+  background: rgb(16, 78, 194);
   color: whitesmoke;
+}
+
+.Contact-Info {
+  font-size: 50px;
+}
+
+.Contact-Email,
+.Contact-Number {
+  font-size: 20px;
 }

@@ -17,37 +17,46 @@
     {
       "title": "3D DESIGN",
       "link": "https://www.artstation.com/moolte",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/3d-design/Cover-Photo.webp?timestamp=123456789"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/3d-design/Cover-Photo.webp"
     },
     {
       "title": "PHOTOGRAPHY",
       "link": "./photography",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/Cover-Photo.webp?timestamp=123456789"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/Cover-Photo.webp"
     },
     {
       "title": "VIDEOGRAPHY",
       "link": "./videography",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp?timestamp=123456789"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp"
     },
     {
       "title": "AUTOMATION",
       "link": "./automation",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/automation/Cover-Photo.webp?timestamp=123456789"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/automation/Cover-Photo.webp"
     },
     {
       "title": "WEB DESIGN",
       "link": "./web-design",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp?timestamp=123456789"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp"
     },
     {
       "title": "GRAPHICS",
       "link": "./graphics",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/graphics/Cover-Photo.webp?timestamp=123456789"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/graphics/Cover-Photo.webp"
     }
   ],
   "videos": [
     {
+      "title": "CINEMATOGRAPHY SHOWREEL 2024",
+      "role": "Cinematographer",
+      "src": "https://player.vimeo.com/video/936525551?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+      "tags": "SHOWREEL",
+      "description": "A collective look at all my work thus far, showcasing my skills in cinematography, colour grading and editing.",
+      "runtime": "2 MINS"
+    },
+    {
       "title": "Grave",
+      "role": "Cinematographer, Colourist",
       "src": "https://www.youtube.com/embed/KFHPuLGV6ZQ?si=98b_FG2sZQAwDKbd",
       "tags": "SHORT FILM, WESTERN",
       "description": "After the loss of his wife, a cowboy tries to live a life of peace and seclusion, but when old enemies come back to haunt him, he must face his past and protect his future.",
@@ -55,6 +64,7 @@
     },
     {
       "title": "Driver",
+      "role": "First Assistant Director",
       "src": "https://www.youtube.com/embed/Km8hLijau5g?si=29kiJLVo-PN4SHAr",
       "tags": "SHORT FILM, DRAMA",
       "description": "A son is forced to live in his car after a series of bills, life choices and the loss of his job. He must find a way to survive and make a living, but struggles to make ends meet.",
@@ -62,6 +72,7 @@
     },
     {
       "title": "Make Better.",
+      "role": "Cinematographer, Colourist",
       "src": "https://www.youtube.com/embed/RH2oEZaKEx4?si=iFo2ZoE5jofJQ6oU",
       "tags": "SHORT FILM, DOCUMENTARY",
       "description": "Rebecca Dimovski is an inspiring young photographer who uses her skill in capturing the female form to discuss the struggles that women go through simply to get a diagnosis for a lifelong chronic condition.",
@@ -69,6 +80,7 @@
     },
     {
       "title": "MyHaileybury Advert",
+      "role": "Camera Operator, Producer",
       "src": "https://www.youtube.com/embed/CDkfzczEHbo?si=poTGqJ-Rc8W5McBl",
       "tags": "SHORT FILM, ADVERT",
       "description": "A short advert for MyHaileybury, a school management system that helps teachers, students and parents stay connected and up to date with school life.",
@@ -76,6 +88,7 @@
     },
     {
       "title": "Life is Fine",
+      "role": "First Assistant Camera",
       "src": "https://www.youtube.com/embed/20HDBlp5_xE?si=wX9uCtfbeL_sykD3",
       "tags": "SHORT FILM, DRAMA",
       "description": "A short film about two gay lovers whos lives are thrown into chaos when one of them is diagnosed with a terminal illness. They must come to terms with the fact that their time together is limited and make the most of it.",

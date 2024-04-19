@@ -16,13 +16,15 @@ const Contact = () => {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-          <div className="Contact-Info">
-            <div>CONTACT INFO</div>
+          <div className="Contact-Pieces">
+            <div className="Contact-Info">CONTACT INFO</div>
             <div>
               <br />
             </div>
-            <div>PH: 0427 922 863</div>
-            <div>EMAIL: mccormack.jacob@gmail.com</div>
+            <div className="Contact-Number">PH: 0427 922 863</div>
+            <div className="Contact-Email">
+              EMAIL: mccormack.jacob@gmail.com
+            </div>
           </div>
         </div>
       </div>
