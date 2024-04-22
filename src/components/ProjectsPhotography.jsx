@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import AnimatedPage from "./AnimatedPage"
 import { Masonry } from "@mui/lab"
-import { Skeleton } from "@mui/lab"
+import { Skeleton } from "@mui/material"
 
 import Dialog from "@mui/material/Dialog"
 import DialogContent from "@mui/material/DialogContent"
