@@ -307,6 +307,26 @@ footer {
   cursor: pointer;
 }
 
+.Load-More {
+  position: fixed;
+  bottom: 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  font-family: var(--Primary-Font);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background-color: rgb(241, 136, 15);
+  color: whitesmoke;
+  font-weight: 400;
+}
+
+.Load-More:hover {
+  transform: scale(1.05);
+}
+
 /* Video Project */
 .Video-All {
   color: whitesmoke;
@@ -402,6 +422,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100%;
   width: 50%;
   background: rgb(16, 78, 194);
@@ -409,7 +430,7 @@ footer {
 }
 
 .Contact-Info {
-  font-size: 50px;
+  font-size: 1rem;
 }
 
 .Contact-Email,
@@ -420,5 +441,33 @@ footer {
 @media (max-width: 768px) {
   .Project-Image-Container {
     width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .Project-Image-Container {
+    width: 100%;
+  }
+
+  /* Video Project */
+  .Video-Container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .Video-Overview {
+    font-size: 10px;
+  }
+
+  .Video-Outline h2 {
+    font-size: 14px;
+  }
+
+  .Video-Description {
+    font-size: 14px;
+  }
+
+  .Contact-Email {
+    font-size: 12px;
   }
 }

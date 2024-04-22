@@ -24,21 +24,17 @@ const ProjectsPhotography = () => {
   }
 
   useEffect(() => {
-    const generateRandomNumbers = (max) => {
-      // Generate an array of sequential numbers from 1 to max
+    const generateRandomNumbers = (max, count) => {
       const numbers = Array.from({ length: max }, (_, i) => i + 1)
-
-      // Shuffle the array using the Fisher-Yates algorithm
       for (let i = numbers.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1))
         ;[numbers[i], numbers[j]] = [numbers[j], numbers[i]]
       }
-
-      return numbers
+      return numbers.slice(0, count)
     }
 
-    // Generate an array of X unique random numbers
-    setRandomNumbers(generateRandomNumbers(132))
+    // Generate an array of 20 unique random numbers between 1 and 132
+    setRandomNumbers(generateRandomNumbers(132, 20))
   }, [setRandomNumbers])
 
   const handleImageLoad = () => {
@@ -51,10 +47,14 @@ const ProjectsPhotography = () => {
     }
   }, [imagesLoaded, randomNumbers.length])
 
+  const ReloadButton = () => {
+    window.location.reload()
+  }
+
   return (
     <AnimatedPage>
       <div className="Photography-All">
-        <Masonry columns={3} spacing={1}>
+        <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }} spacing={0.4}>
           {randomNumbers.map((number, index) =>
             loading ? (
               <img
@@ -89,10 +89,13 @@ const ProjectsPhotography = () => {
             <img
               src={selectedImage}
               alt=""
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "100%", maxHeight: "85vh", objectFit: "contain" }}
             />
           </DialogContent>
         </Dialog>
+      <button className="Load-More" onClick={ReloadButton}>
+        LOAD MORE
+      </button>
       </div>
     </AnimatedPage>
   )

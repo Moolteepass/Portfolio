@@ -99,5 +99,25 @@
     {
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/contact/Reach-out.webp?timestamp=123456789"
     }
+  ],
+  "webdesign": [
+    {
+      "src": "https://snippetsilo-frontend-production.up.railway.app/",
+      "title": "Snippet Silo",
+      "description": "A place to hold all your web clips",
+      "thumbnail": ""
+    },
+    {
+      "src": "https://moolteepass.github.io/TutorialSearch/",
+      "title": "Tutorial Search",
+      "description": "Simple search website to find the tutorials i've made",
+      "thumbnail": ""
+    },
+    {
+      "src": "https://moolteepass.github.io/exhibit-display/",
+      "title": "Exhibit Display",
+      "description": "Front end digital display-based website to show case work",
+      "thumbnail": ""
+    }
   ]
 }
