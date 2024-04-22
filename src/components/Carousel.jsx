@@ -26,7 +26,7 @@ const Carousel = () => {
   return (
     <div className="Carousel">
       {slides.map((item, index) => (
-        <Slide key={item.id} item={item} isActive={slide === index} />
+        <Slide key={index} item={item} isActive={slide === index} />
       ))}
     </div>
   )
