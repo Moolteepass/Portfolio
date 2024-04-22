@@ -25,13 +25,15 @@ const ProjectsPhotography = () => {
 
   useEffect(() => {
     const generateRandomNumbers = (max) => {
-      const numbers = []
-      while (numbers.length < max) {
-        const randomNumber = Math.floor(Math.random() * max) + 1
-        if (!numbers.includes(randomNumber)) {
-          numbers.push(randomNumber)
-        }
+      // Generate an array of sequential numbers from 1 to max
+      const numbers = Array.from({ length: max }, (_, i) => i + 1)
+
+      // Shuffle the array using the Fisher-Yates algorithm
+      for (let i = numbers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        ;[numbers[i], numbers[j]] = [numbers[j], numbers[i]]
       }
+
       return numbers
     }
 
