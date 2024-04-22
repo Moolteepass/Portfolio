@@ -36,7 +36,7 @@ const ProjectsPhotography = () => {
     }
 
     // Generate an array of X unique random numbers
-    setRandomNumbers(generateRandomNumbers(20))
+    setRandomNumbers(generateRandomNumbers(132))
   }, [setRandomNumbers])
 
   const handleImageLoad = () => {
@@ -57,13 +57,13 @@ const ProjectsPhotography = () => {
             loading ? (
               <img
                 loading="lazy"
-                src={`https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/fashion/${number}.jpg`}
+                src={`https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/${number}.jpg`}
                 alt={`Image ${number}`}
                 key={index}
                 onLoad={handleImageLoad}
                 onClick={() =>
                   handleClickOpen(
-                    `https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/fashion/${number}.jpg`
+                    `https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/${number}.jpg`
                   )
                 }
               />
