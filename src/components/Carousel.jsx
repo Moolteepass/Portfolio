@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import { slides } from "./images.json"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faExpand } from "@fortawesome/free-solid-svg-icons"
 
 const Slide = ({ item, isActive }) => (
   <div>
@@ -14,12 +16,20 @@ const Slide = ({ item, isActive }) => (
 const Carousel = () => {
   const [slide, setSlide] = useState(0)
 
+  const toggleFullscreen = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen()
+    } else {
+      document.documentElement.requestFullscreen()
+    }
+  }
+
   useEffect(() => {
     const nextSlide = () => {
       setSlide(slide === slides.length - 1 ? 0 : slide + 1)
     }
 
-    const timeoutId = setTimeout(nextSlide, 5500)
+    const timeoutId = setTimeout(nextSlide, 4500)
     return () => clearTimeout(timeoutId)
   })
 
@@ -28,6 +38,21 @@ const Carousel = () => {
       {slides.map((item, index) => (
         <Slide key={index} item={item} isActive={slide === index} />
       ))}
+      <div className="Carousel-Dots">
+        {slides.map((_, index) => (
+          <div
+            key={index}
+            className={
+              slide === index
+                ? "Carousel-Dot Carousel-Dot-Active"
+                : "Carousel-Dot"
+            }
+          />
+        ))}
+      </div>
+      <div className="Fullscreen" onClick={toggleFullscreen}>
+        <FontAwesomeIcon icon={faExpand} />
+      </div>
     </div>
   )
 }

@@ -43,11 +43,13 @@ const App = () => {
                 : "Nav-Container"
             }
           >
-            <img
-              className="Nav-Logo"
-              src="https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/logo/MonkeyMedia.webp"
-              alt="Logo"
-            />
+            <Link to="/" className="Nav-Link">
+              <img
+                className="Nav-Logo"
+                src="https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/logo/MonkeyMedia.webp"
+                alt="Logo"
+              />
+            </Link>
             <nav className="Nav-list">
               <ul>
                 <li>

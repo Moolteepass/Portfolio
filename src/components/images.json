@@ -22,7 +22,7 @@
     {
       "title": "PHOTOGRAPHY",
       "link": "./photography",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/Cover-Photo.webp"
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/Cover-Photo.webp?v=1234"
     },
     {
       "title": "VIDEOGRAPHY",
