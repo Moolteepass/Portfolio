@@ -1,18 +1,24 @@
 import { useEffect, useState } from "react"
 import AnimatedPage from "./AnimatedPage"
 import { Masonry } from "@mui/lab"
-import { Skeleton } from "@mui/material"
 
 import Dialog from "@mui/material/Dialog"
 import DialogContent from "@mui/material/DialogContent"
 
 const ProjectsPhotography = () => {
   const [randomNumbers, setRandomNumbers] = useState([])
-  const [loading, setLoading] = useState(false)
-  const [imagesLoaded, setImagesLoaded] = useState(0)
 
   const [open, setOpen] = useState(false)
   const [selectedImage, setSelectedImage] = useState(null)
+
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true)
+    }, 1000)
+    return () => clearTimeout(timer) // Clean up on component unmount
+  }, [])
 
   const handleClickOpen = (image) => {
     setSelectedImage(image)
@@ -34,18 +40,8 @@ const ProjectsPhotography = () => {
     }
 
     // Generate an array of 20 unique random numbers between 1 and 132
-    setRandomNumbers(generateRandomNumbers(132, 20))
+    setRandomNumbers(generateRandomNumbers(132, 30))
   }, [setRandomNumbers])
-
-  const handleImageLoad = () => {
-    setImagesLoaded((prevCount) => prevCount + 1)
-  }
-
-  useEffect(() => {
-    if (imagesLoaded === randomNumbers.length) {
-      setLoading(true)
-    }
-  }, [imagesLoaded, randomNumbers.length])
 
   const ReloadButton = () => {
     window.location.reload()
@@ -53,49 +49,43 @@ const ProjectsPhotography = () => {
 
   return (
     <AnimatedPage>
-      <div className="Photography-All">
+      <div
+        className={`Photography-All ${isLoaded ? "fade-in" : ""}`}
+        style={{ opacity: isLoaded ? 1 : 0 }}
+      >
         <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }} spacing={0.4}>
-          {randomNumbers.map((number, index) =>
-            loading ? (
-              <img
-                loading="lazy"
-                src={`https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/${number}.jpg`}
-                alt={`Image ${number}`}
-                key={index}
-                onLoad={handleImageLoad}
-                onClick={() =>
-                  handleClickOpen(
-                    `https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/${number}.jpg`
-                  )
-                }
-              />
-            ) : (
-              <Skeleton
-                variant="rectangular"
-                width={210}
-                height={118}
-                key={index}
-              />
-            )
-          )}
+          {randomNumbers.map((number, index) => (
+            <img
+              loading="lazy"
+              src={`https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/${number}.jpg`}
+              alt={`Image ${number}`}
+              key={index}
+              onClick={() =>
+                handleClickOpen(
+                  `https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/${number}.jpg`
+                )
+              }
+            />
+          ))}
         </Masonry>
         <Dialog
           open={open}
           onClose={handleClose}
           fullWidth={true}
-          maxWidth={"md"}
+          maxWidth={"lg"}
         >
           <DialogContent>
             <img
               src={selectedImage}
               alt=""
               style={{ width: "100%", maxHeight: "85vh", objectFit: "contain" }}
+              onClick={handleClose}
             />
           </DialogContent>
         </Dialog>
-      <button className="Load-More" onClick={ReloadButton}>
-        LOAD MORE
-      </button>
+        <button className="Load-More" onClick={ReloadButton}>
+          LOAD MORE
+        </button>
       </div>
     </AnimatedPage>
   )

@@ -38,6 +38,10 @@ p {
   display: none;
 }
 
+.image {
+  visibility: hidden;
+}
+
 /* Full App Styles */
 .Full-App {
   display: flex;
