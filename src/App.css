@@ -75,6 +75,14 @@ p {
   width: auto;
 }
 
+.Nav-Main img {
+  transition: transform 0.2s ease;
+}
+
+.Nav-Main img:hover {
+  transform: scale(1.1);
+}
+
 .Nav-list {
   font-size: 16px;
 }
