@@ -217,7 +217,8 @@ footer {
   margin-top: 8px;
   background-color: #5a5a5a;
   border-radius: 50%;
-  transition: transform 1s ease, margin-top 1s ease, margin-bottom 1s ease;
+  transition: transform 1s ease, margin-top 1s ease, margin-bottom 1s ease,
+    background-color 1s ease;
 }
 
 .Carousel-Dot-Active {
@@ -298,6 +299,7 @@ footer {
   position: relative;
   width: 33.33333333%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .Project-Image {
@@ -396,8 +398,7 @@ footer {
 
 .Videoplayer-Container {
   min-width: 200px;
-  width: 300px;
-  max-width: 250px;
+  max-width: 200px;
   transition: transform 0.2s ease;
 }
 
@@ -443,7 +444,7 @@ footer {
 }
 
 .Contact-Image-Container {
-  height: 600px;
+  height: 50vh;
 }
 
 .Contact-All img {
@@ -485,6 +486,12 @@ footer {
   font-size: 20px;
 }
 
+@media (max-width: 992px) {
+  .Project-Image-Container {
+    width: 50%;
+  }
+}
+
 @media (max-width: 768px) {
   .Project-Image-Container {
     width: 50%;
@@ -492,6 +499,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .HomePage-Bio {
+    flex-direction: column;
+  }
+
   .Project-Image-Container {
     width: 100%;
   }
