@@ -7,7 +7,6 @@ import HomePage from "./components/HomePage"
 import Projects from "./components/Projects"
 import ProjectsPhotography from "./components/ProjectsPhotography"
 import ProjectsVideography from "./components/ProjectsVideography"
-import ProjectsAutomation from "./components/ProjectsAutomation"
 import ProjectsWebDesign from "./components/ProjectsWebDesign"
 import ProjectsGraphics from "./components/ProjectsGraphics"
 import Contact from "./components/Contact"
@@ -82,10 +81,6 @@ const App = () => {
             <Route
               path="projects/videography"
               element={<ProjectsVideography />}
-            />
-            <Route
-              path="projects/automation"
-              element={<ProjectsAutomation />}
             />
             <Route path="projects/web-design" element={<ProjectsWebDesign />} />
             <Route path="projects/graphics" element={<ProjectsGraphics />} />

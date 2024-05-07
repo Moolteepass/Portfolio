@@ -5,24 +5,30 @@ import { webdesign } from "./images.json"
 const ProjectsWebDesign = () => {
   return (
     <AnimatedPage>
-      <div className="Video-All">
+      <div className="WebDev-All">
         {webdesign.map((item, index) => (
-          <div key={index} className="Video-Container">
-            <div className="Videoplayer-Container">
-              <iframe
+          <div key={index} className="WebDev-Container">
+            <div className="WebDevplayer-Container">
+              <img
                 width="560"
                 height="315"
-                src={item.src}
+                src={item.thumbnail}
                 title={item.title}
                 frameborder="0"
                 allow="autoplay; fullscreen"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-              ></iframe>
+              ></img>
             </div>
-            <div className="Video-Outline">
+            <div className="WebDev-Outline">
               <h2>{item.title}</h2>
-              <div className="Video-Description">{item.description}</div>
+              <div className="WebDev-Description">{item.description}</div>
+              <button
+                className="WebDev-Link"
+                onClick={() => window.open(item.src, "_blank")}
+              >
+                Check it out
+              </button>
             </div>
           </div>
         ))}

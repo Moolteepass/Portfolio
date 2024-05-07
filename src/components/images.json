@@ -25,24 +25,14 @@
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/Cover-Photo.webp?v=1234"
     },
     {
-      "title": "VIDEOGRAPHY",
-      "link": "./videography",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp"
-    },
-    {
-      "title": "AUTOMATION",
-      "link": "./automation",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/automation/Cover-Photo.webp"
-    },
-    {
       "title": "WEB DESIGN",
       "link": "./web-design",
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp"
     },
     {
-      "title": "GRAPHICS",
-      "link": "./graphics",
-      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/graphics/Cover-Photo.webp"
+      "title": "VIDEOGRAPHY",
+      "link": "./videography",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp"
     }
   ],
   "videos": [
@@ -84,7 +74,7 @@
       "src": "https://www.youtube.com/embed/CDkfzczEHbo?si=poTGqJ-Rc8W5McBl",
       "tags": "SHORT FILM, ADVERT",
       "description": "A short advert for MyHaileybury, a school management system that helps teachers, students and parents stay connected and up to date with school life.",
-      "runtime": "3:00"
+      "runtime": "3 MINS"
     },
     {
       "title": "Life is Fine",
@@ -102,22 +92,22 @@
   ],
   "webdesign": [
     {
-      "src": "https://snippetsilo-frontend-production.up.railway.app/",
+      "src": "https://snippetsilo.up.railway.app/",
       "title": "Snippet Silo",
       "description": "A place to hold all your web clips",
-      "thumbnail": ""
+      "thumbnail": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/Cover-Photo.webp"
     },
     {
       "src": "https://moolteepass.github.io/TutorialSearch/",
       "title": "Tutorial Search",
-      "description": "Simple search website to find the tutorials i've made",
-      "thumbnail": ""
+      "description": "Simple search website to find the tutorials I've made",
+      "thumbnail": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/TutorialSearch.webp"
     },
     {
       "src": "https://moolteepass.github.io/exhibit-display/",
       "title": "Exhibit Display",
       "description": "Front end digital display-based website to show case work",
-      "thumbnail": ""
+      "thumbnail": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/webdev/ExhibitDisplay.webp"
     }
   ]
 }
