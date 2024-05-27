@@ -357,12 +357,31 @@ footer {
 
 /* Photography Project */
 .Photography-All {
-  display: flex;
+  width: 100%;
+}
+
+.Photography-Individual {
+  transition: transform 0.15s ease;
+}
+
+.Photography-Individual:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .Photography-All img {
+  display: block;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+}
+
+.loading-animation {
+  height: 100vh;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Video Project */

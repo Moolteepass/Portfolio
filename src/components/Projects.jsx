@@ -9,6 +9,11 @@ const Projects = () => {
   const [loadedImages, setLoadedImages] = useState({})
 
   useEffect(() => {
+    // Force user to scroll to the top of the screen
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     project_images.forEach((item, index) => {
       const img = new Image()
       img.src = item.src
