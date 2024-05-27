@@ -4,7 +4,9 @@ import Masonry from "@mui/lab/Masonry"
 import Dialog from "@mui/material/Dialog"
 import DialogContent from "@mui/material/DialogContent"
 import { photography_images } from "./components/images.json"
-import "ldrs/grid"
+import { grid } from "ldrs"
+
+grid.register()
 
 const PhotographyEvents = () => {
   const main_index = 2
