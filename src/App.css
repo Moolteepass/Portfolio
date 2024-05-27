@@ -361,35 +361,19 @@ footer {
   margin-right: -5px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .Photography-All img {
   transition: transform 0.4s ease;
+  height: 200px;
+  width: auto;
 }
 
 .Photography-All img:hover {
   transform: scale(1.05);
   cursor: pointer;
-}
-
-.Load-More {
-  position: fixed;
-  bottom: 20px;
-  border-radius: 20px;
-  outline: none;
-  border: none;
-  font-size: 20px;
-  padding: 10px;
-  font-family: var(--Primary-Font);
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  background-color: rgb(241, 136, 15);
-  color: whitesmoke;
-  font-weight: 400;
-}
-
-.Load-More:hover {
-  transform: scale(1.05);
 }
 
 /* Video Project */
@@ -578,6 +562,12 @@ footer {
 .WebDev-Link:hover {
   cursor: pointer;
   background: rgb(16, 78, 194);
+}
+
+@media (max-width: 1200px) {
+  .Project-Image-Container {
+    width: 50%;
+  }
 }
 
 @media (max-width: 992px) {
