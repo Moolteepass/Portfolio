@@ -35,6 +35,32 @@
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/video/Cover-Photo.webp"
     }
   ],
+  "photography_images": [
+    {
+      "title": "STAGESHOWS",
+      "link": "./stageshows",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/stageshows/Cover-Photo.webp",
+      "img_amount": "19"
+    },
+    {
+      "title": "WILDLIFE",
+      "link": "./wildlife",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/wildlife/Cover-Photo.webp",
+      "img_amount": "11"
+    },
+    {
+      "title": "EVENTS",
+      "link": "./events",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/events/Cover-Photo.webp",
+      "img_amount": "63"
+    },
+    {
+      "title": "FASHION",
+      "link": "./fashion",
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/fashion/Cover-Photo.webp",
+      "img_amount": "39"
+    }
+  ],
   "videos": [
     {
       "title": "CINEMATOGRAPHY SHOWREEL 2024",

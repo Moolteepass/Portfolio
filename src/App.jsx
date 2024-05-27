@@ -10,6 +10,10 @@ import ProjectsVideography from "./components/ProjectsVideography"
 import ProjectsWebDesign from "./components/ProjectsWebDesign"
 import ProjectsGraphics from "./components/ProjectsGraphics"
 import Contact from "./components/Contact"
+import PhotographyStageshows from "./components/PhotographyStageshows"
+import PhotographyWildlife from "./components/PhotographyWildlife"
+import PhotographyEvents from "./PhotographyEvents"
+import PhotographyFashion from "./PhotographyFashion"
 
 const App = () => {
   const [showNavbarBg, setShowNavbarBg] = useState(false)
@@ -77,6 +81,22 @@ const App = () => {
             <Route
               path="projects/photography"
               element={<ProjectsPhotography />}
+            />
+            <Route
+              path="projects/photography/stageshows"
+              element={<PhotographyStageshows />}
+            />
+            <Route
+              path="projects/photography/wildlife"
+              element={<PhotographyWildlife />}
+            />
+            <Route
+              path="projects/photography/events"
+              element={<PhotographyEvents />}
+            />
+            <Route
+              path="projects/photography/fashion"
+              element={<PhotographyFashion />}
             />
             <Route
               path="projects/videography"
