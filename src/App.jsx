@@ -107,7 +107,10 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>
-        <footer>Jacob McCormack 2024 ©</footer>
+        <footer>
+          Built with React by <br />
+          Jacob McCormack in 2024 ©
+        </footer>
       </div>
     </Router>
   )

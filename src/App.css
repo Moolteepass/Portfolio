@@ -246,6 +246,15 @@ footer {
   transition: transform 0.2s ease;
 }
 
+.Scroll-Down {
+  z-index: 3;
+  font-size: 30px;
+  color: whitesmoke;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+
 .Fullscreen:hover {
   cursor: pointer;
   transform: scale(1.5);
@@ -582,21 +591,44 @@ footer {
   .Project-Image-Container {
     width: 50%;
   }
+
+  .Skills-Card-All {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
   .Project-Image-Container {
     width: 50%;
+    height: 50vh;
   }
 }
 
 @media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .HomePage-Bio {
     flex-direction: column;
   }
 
+  .Fullscreen {
+    display: none;
+    pointer-events: none;
+  }
+
   .Project-Image-Container {
     width: 100%;
+    height: 25vh;
+  }
+
+  .HomePage-Container {
+    width: 90%;
+  }
+
+  .Project-Image-Container img {
+    object-position: top;
   }
 
   /* Video Project */

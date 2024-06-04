@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import { slides } from "./images.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExpand } from "@fortawesome/free-solid-svg-icons"
+import { faExpand, faAnglesDown } from "@fortawesome/free-solid-svg-icons"
 
 const Slide = ({ item, isActive }) => (
   <div>
@@ -52,6 +52,9 @@ const Carousel = () => {
       </div>
       <div className="Fullscreen" onClick={toggleFullscreen}>
         <FontAwesomeIcon icon={faExpand} />
+      </div>
+      <div className="Scroll-Down fade-in">
+        <FontAwesomeIcon icon={faAnglesDown} />
       </div>
     </div>
   )

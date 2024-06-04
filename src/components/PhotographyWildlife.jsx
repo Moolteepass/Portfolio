@@ -55,7 +55,7 @@ const PhotographyWildlife = () => {
             <l-grid size={"150"} speed={"1.5"} color={"white"} />
           </div>
         </div>
-        <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }} spacing={0.5}>
+        <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }} spacing={0}>
           {numberArray.map((num, index) => (
             <div
               key={index}
@@ -83,7 +83,7 @@ const PhotographyWildlife = () => {
           <img
             src={selectedImage}
             alt=""
-            style={{ maxWidth: "80vw", height: "80vh", objectFit: "contain" }}
+            style={{ maxWidth: "70vw", height: "80vh", objectFit: "contain" }}
           />
         </DialogContent>
       </Dialog>
