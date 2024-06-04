@@ -33,8 +33,7 @@ const Projects = () => {
             <Skeleton
               variant="rectangular"
               animation="wave"
-              width="33.333%"
-              height={500}
+              style={{ height: "100vh", width: "50%" }}
               key={index}
             />
           )
