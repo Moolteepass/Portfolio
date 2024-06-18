@@ -11,6 +11,12 @@
     },
     {
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/best/Live-4.webp?timestamp=123456789"
+    },
+    {
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/best/Live-5.webp?timestamp=123456789"
+    },
+    {
+      "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/best/Live-6.webp?timestamp=123456789"
     }
   ],
   "project_images": [
@@ -40,7 +46,7 @@
       "title": "STAGESHOWS",
       "link": "./stageshows",
       "src": "https://monkey-media-portfolio-images.s3.ap-southeast-2.amazonaws.com/photography/stageshows/Cover-Photo.webp",
-      "img_amount": "19"
+      "img_amount": "54"
     },
     {
       "title": "WILDLIFE",
