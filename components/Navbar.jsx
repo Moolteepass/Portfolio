@@ -10,6 +10,20 @@ const Navbar = () => {
         height={70}
         loading={"eager"}
       />
+      <ul>
+        <li>
+          <link rel="stylesheet" href="" />
+          HOME
+        </li>
+        <li>
+          <link rel="stylesheet" href="" />
+          PROJECTS
+        </li>
+        <li>
+          <link rel="stylesheet" href="" />
+          CONTACT
+        </li>
+      </ul>
     </nav>
   )
 }

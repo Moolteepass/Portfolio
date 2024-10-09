@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { listImagesInFolder } from "../../../utils/s3"
+import { listImagesInFolder } from "@/utils/s3"
 
 // This replaces getStaticPaths
 export async function generateStaticParams() {
