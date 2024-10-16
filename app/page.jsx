@@ -1,9 +1,7 @@
-const { default: Carousel } = require("@/components/Carousel")
-
 const HomePage = () => {
   return (
     <>
-      <Carousel />
+      <h1>hi</h1>
     </>
   )
 }
