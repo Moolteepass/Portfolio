@@ -35,6 +35,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by all major browsers */
+}
+
+h1 {
+  font-family: var(--defaultFont);
+  font-weight: 500;
 }
 
 * {
@@ -92,7 +102,6 @@ main {
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
   display: flex;
   align-items: center;
@@ -124,4 +133,177 @@ main {
 
 .navbar li:hover {
   transform: var(--defaultScale);
+}
+
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide-visible {
+  opacity: 1;
+}
+
+.slide-hidden {
+  opacity: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.carousel-dots {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+.carousel-dot-active {
+  background-color: white;
+}
+
+.fullscreen-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: white;
+  font-size: 24px;
+  animation: bounce 2s;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Project styles */
+.image-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  overflow-x: hidden; /* Ensures there's no horizontal scrollbar */
+}
+
+.image-wrapper {
+  position: relative;
+  width: calc(25vw + 5%); /* Increase width to ensure overlapping */
+  height: 100vh;
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  overflow: hidden;
+  margin-left: -5%; /* Adjust this for consistent overlap */
+}
+
+.image-wrapper:first-child {
+  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+  margin-left: 0;
+}
+
+.image-wrapper:nth-child(2) {
+  margin-left: -6%;
+  object-position: 10% center;
+}
+
+.image-wrapper:nth-child(2) img {
+  object-position: 40% center;
+}
+
+.image-wrapper:nth-child(3) {
+  margin-left: -6%;
+}
+
+.image-wrapper:last-child {
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  margin-right: 0; /* Ensure no right-margin to avoid overflow */
+  margin-left: -6%; /* Ensure consistent overlap */
+}
+
+.image-content {
+  width: 100%;
+  height: 100%;
+  transition: var(--defaultSpeed);
+}
+
+.image-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-content:hover {
+  transform: var(--defaultScale) rotate(1deg);
+  cursor: pointer;
+}
+
+.image-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white; /* Or any color that contrasts the image */
+  font-size: 24px; /* Adjust font size as needed */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Darker and larger shadow */
+  z-index: 2; /* Ensure it's above the image */
+  text-align: center;
+  width: 100%; /* Stretch to cover image width for full centering */
 }

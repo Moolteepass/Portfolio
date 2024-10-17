@@ -6,7 +6,7 @@ import Link from "next/link"
 async function fetchImages() {
   const params = {
     Bucket: "monkey-media-portfolio-images",
-    Prefix: `projects`,
+    Prefix: `photography/covers`,
   }
   try {
     const command = new ListObjectsV2Command(params)
@@ -25,12 +25,7 @@ async function fetchImages() {
       })
 
     // Define your project titles
-    const projectTitles = [
-      "3D Design",
-      "Photography",
-      "Web Design",
-      "Videography",
-    ]
+    const projectTitles = ["events", "fashion", "stageshows", "wildlife"]
 
     // Assign titles to the images
     return imageObjects.map((obj, index) => ({
@@ -43,14 +38,14 @@ async function fetchImages() {
   }
 }
 
-export default async function Projects() {
+export default async function Photography() {
   const projectImages = await fetchImages()
 
   return (
     <div className="image-container">
       {projectImages.map((project, index) => (
         <div key={index} className="image-wrapper">
-          <Link href={"/projects/photography"}>
+          <Link href={`/projects/photography/${project.title}`}>
             <div className="image-content">
               <Image
                 priority
