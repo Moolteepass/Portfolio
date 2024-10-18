@@ -2,6 +2,7 @@ import { ListObjectsV2Command } from "@aws-sdk/client-s3"
 import { s3Client } from "@/config/aws-config.jsx"
 import Image from "next/image"
 import Link from "next/link"
+import FadeInWrapper from "@/components/FadeInWrapper"
 
 async function fetchImages() {
   const params = {
@@ -42,23 +43,33 @@ export default async function Photography() {
   const projectImages = await fetchImages()
 
   return (
-    <div className="image-container">
-      {projectImages.map((project, index) => (
-        <div key={index} className="image-wrapper">
-          <Link href={`/projects/photography/${project.title}`}>
-            <div className="image-content">
-              <Image
-                priority
-                src={project.url}
-                fill
-                sizes="100vh"
-                alt={project.title}
-              />
-              <h1 className="image-title">{project.title.toUpperCase()}</h1>
-            </div>
-          </Link>
-        </div>
-      ))}
-    </div>
+    <FadeInWrapper>
+      <div className="image-container">
+        {projectImages.map((project, index) => (
+          <div
+            key={index}
+            className="image-wrapper"
+            style={{ position: "relative" }}
+          >
+            <Link href={`/projects/photography/${project.title}`}>
+              <div
+                className="image-content"
+                style={{ position: "relative", width: "100%", height: "100%" }}
+              >
+                <Image
+                  priority
+                  src={project.url}
+                  fill
+                  sizes="100vh"
+                  alt={project.title}
+                  style={{ objectFit: "cover" }}
+                />
+                <h1 className="image-title">{project.title.toUpperCase()}</h1>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </FadeInWrapper>
   )
 }

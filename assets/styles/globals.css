@@ -69,6 +69,15 @@ main {
   z-index: 1;
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
 /* Loading page styles */
 .loading-spinner {
   display: flex;
@@ -106,6 +115,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  pointer-events: none;
+}
+
+.navbar-image,
+.navbar ul,
+.navbar li {
+  pointer-events: auto;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3)); /* Add drop shadow */
 }
 
 .navbar-image {
@@ -135,12 +152,28 @@ main {
   transform: var(--defaultScale);
 }
 
+/* Add this to make the text more visible */
+.navbar li a {
+  color: white; /* Adjust color as needed */
+  text-shadow: 0px 2px 4px rgba(70, 70, 70, 0.01); /* Add text shadow for better visibility */
+}
+
 /* Carousel styles */
+.object-cover {
+  object-fit: cover;
+}
+
 .carousel-container {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-container.loaded {
+  opacity: 1;
 }
 
 .carousel {
@@ -282,6 +315,7 @@ main {
   width: 100%;
   height: 100%;
   transition: var(--defaultSpeed);
+  position: relative;
 }
 
 .image-content img {
@@ -306,4 +340,78 @@ main {
   z-index: 2; /* Ensure it's above the image */
   text-align: center;
   width: 100%; /* Stretch to cover image width for full centering */
+}
+
+/* Masonry layout styles */
+.masonry-grid {
+  display: flex;
+  width: auto;
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #272727 25%, #1f1f1f 50%, #272727 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.fullscreen-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-loader {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
