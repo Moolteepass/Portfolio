@@ -26,7 +26,7 @@ async function fetchImages() {
       })
 
     // Define your project titles
-    const projectTitles = ["events", "fashion", "stageshows", "wildlife"]
+    const projectTitles = ["events", "corporate", "stageshows", "wildlife"]
 
     // Assign titles to the images
     return imageObjects.map((obj, index) => ({

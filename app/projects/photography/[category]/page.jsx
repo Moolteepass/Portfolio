@@ -26,17 +26,10 @@ function ImageComponent({ src, alt, onClick, priority }) {
       <Image
         src={src}
         alt={alt}
-        width={300}
-        height={200}
+        width={500}
+        height={300}
         priority={priority}
-        style={{
-          width: "100%",
-          height: "auto",
-          display: "block",
-          opacity: isLoaded ? 1 : 0,
-          transition: "opacity 0.5s ease-in-out",
-          cursor: "pointer",
-        }}
+        className={isLoaded ? "loaded" : ""}
         onLoad={() => setIsLoaded(true)}
       />
     </div>

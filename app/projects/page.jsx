@@ -29,7 +29,7 @@ async function fetchImages() {
     const projectTitles = [
       "3D Design",
       "Photography",
-      "Web Design",
+      "Web-Design",
       "Videography",
     ]
 
@@ -52,7 +52,7 @@ export default async function Projects() {
       <div className="image-container">
         {projectImages.map((project, index) => (
           <div key={index} className="image-wrapper">
-            <Link href={"/projects/photography"}>
+            <Link href={`/projects/${project.title.toLowerCase()}`}>
               <div className="image-content">
                 <Image
                   priority

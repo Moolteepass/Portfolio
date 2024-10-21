@@ -14,9 +14,10 @@ const Slide = ({ item, isActive }) => (
     <Image
       src={item}
       alt="Carousel slide"
-      fill
       style={{ objectFit: "cover" }}
-      sizes="100vw"
+      height={2000}
+      width={2000}
+      priority
     />
   </div>
 )
