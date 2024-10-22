@@ -17,16 +17,16 @@ async function fetchImages(category) {
   }
 }
 
-function ImageComponent({ src, alt, onClick, priority }) {
+function ImageComponent({ src, alt, onClick, priority, isLoading }) {
   const [isLoaded, setIsLoaded] = useState(false)
 
   return (
     <div className="image-item" onClick={() => onClick(src)}>
-      {!isLoaded && <div className="skeleton-loader"></div>}
+      {(isLoading || !isLoaded) && <div className="skeleton-loader"></div>}
       <Image
         src={src}
         alt={alt}
-        width={500}
+        width={300}
         height={300}
         priority={priority}
         className={isLoaded ? "loaded" : ""}
@@ -103,7 +103,6 @@ export default function Gallery({ params }) {
     setFullscreenImage(null)
   }
 
-  if (isLoading) return <div>Loading...</div>
   if (error) return <div>{error}</div>
 
   return (
@@ -113,13 +112,14 @@ export default function Gallery({ params }) {
         className="masonry-grid"
         columnClassName="masonry-grid_column"
       >
-        {images.map((url, index) => (
+        {(isLoading ? Array(10).fill("") : images).map((url, index) => (
           <ImageComponent
-            key={url}
+            key={url || index} // Use index for skeletons
             src={url}
             alt={`${params.category} image ${index + 1}`}
             onClick={handleImageClick}
             priority={index === 0}
+            isLoading={isLoading}
           />
         ))}
       </Masonry>
