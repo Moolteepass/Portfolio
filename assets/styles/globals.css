@@ -562,8 +562,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  cursor: pointer;
+  z-index: 1000;
 }
 
 .fullscreen-content {

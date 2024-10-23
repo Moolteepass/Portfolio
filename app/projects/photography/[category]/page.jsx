@@ -1,15 +1,13 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import Masonry from "react-masonry-css"
 
-async function fetchImages(category) {
+const fetchImages = async (category) => {
   try {
     const response = await fetch(`/api/images?folder=photography/${category}`)
-    if (!response.ok) {
-      throw new Error("Failed to fetch images")
-    }
+    if (!response.ok) throw new Error("Failed to fetch images")
     return await response.json()
   } catch (error) {
     console.error("Error fetching images:", error)
@@ -17,55 +15,51 @@ async function fetchImages(category) {
   }
 }
 
-function ImageComponent({ src, alt, onClick, priority, isLoading }) {
+const ImageComponent = ({ src, alt, onClick, priority, isLoading }) => {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [showImage, setShowImage] = useState(false)
+
+  useEffect(() => {
+    if (!isLoading) {
+      const timer = setTimeout(() => setShowImage(true), 100)
+      return () => clearTimeout(timer)
+    }
+  }, [isLoading])
 
   return (
-    <div className="image-item" onClick={() => onClick(src)}>
+    <div className="image-item" onClick={() => !isLoading && onClick(src)}>
       {(isLoading || !isLoaded) && <div className="skeleton-loader"></div>}
-      <Image
-        src={src}
-        alt={alt}
-        width={300}
-        height={300}
-        priority={priority}
-        className={isLoaded ? "loaded" : ""}
-        onLoad={() => setIsLoaded(true)}
-      />
+      {showImage && (
+        <Image
+          src={src}
+          alt={alt}
+          width={300}
+          height={300}
+          priority={priority}
+          className={isLoaded ? "loaded" : ""}
+          onLoad={() => setIsLoaded(true)}
+        />
+      )}
     </div>
   )
 }
 
-function FullscreenImage({ src, alt, onClose }) {
-  return (
-    <div
-      className="fullscreen-overlay"
+const FullscreenImage = ({ src, alt, onClose }) => (
+  <div className="fullscreen-overlay" onClick={onClose}>
+    <img
+      src={src}
+      alt={alt}
+      style={{ maxWidth: "90%", maxHeight: "90%", objectFit: "contain" }}
       onClick={onClose}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0.9)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        zIndex: 1000,
-      }}
-    >
-      <img
-        src={src}
-        alt={alt}
-        style={{
-          maxWidth: "90%",
-          maxHeight: "90%",
-          objectFit: "contain",
-        }}
-        onClick={onClose} // Changed this line
-      />
-    </div>
-  )
+    />
+  </div>
+)
+
+const breakpointColumnsObj = {
+  default: 4,
+  1100: 3,
+  700: 2,
+  500: 1,
 }
 
 export default function Gallery({ params }) {
@@ -75,33 +69,22 @@ export default function Gallery({ params }) {
   const [fullscreenImage, setFullscreenImage] = useState(null)
 
   useEffect(() => {
-    setIsLoading(true)
-    setError(null)
-    fetchImages(params.category)
-      .then((images) => {
-        setImages(images)
-        setIsLoading(false)
-      })
-      .catch((err) => {
+    const loadImages = async () => {
+      try {
+        setIsLoading(true)
+        const fetchedImages = await fetchImages(params.category)
+        setImages(fetchedImages)
+      } catch (err) {
         setError("Failed to load images. Please try again later.")
+      } finally {
         setIsLoading(false)
-      })
+      }
+    }
+    loadImages()
   }, [params.category])
 
-  const breakpointColumnsObj = {
-    default: 4,
-    1100: 3,
-    700: 2,
-    500: 1,
-  }
-
-  const handleImageClick = (src) => {
-    setFullscreenImage(src)
-  }
-
-  const closeFullscreen = () => {
-    setFullscreenImage(null)
-  }
+  const handleImageClick = useCallback((src) => setFullscreenImage(src), [])
+  const closeFullscreen = useCallback(() => setFullscreenImage(null), [])
 
   if (error) return <div>{error}</div>
 
@@ -114,7 +97,7 @@ export default function Gallery({ params }) {
       >
         {(isLoading ? Array(10).fill("") : images).map((url, index) => (
           <ImageComponent
-            key={url || index} // Use index for skeletons
+            key={isLoading ? index : url}
             src={url}
             alt={`${params.category} image ${index + 1}`}
             onClick={handleImageClick}
