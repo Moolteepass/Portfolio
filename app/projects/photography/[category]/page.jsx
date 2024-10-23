@@ -33,8 +33,8 @@ const ImageComponent = ({ src, alt, onClick, priority, isLoading }) => {
         <Image
           src={src}
           alt={alt}
-          width={300}
-          height={300}
+          width={400}
+          height={400}
           priority={priority}
           className={isLoaded ? "loaded" : ""}
           onLoad={() => setIsLoaded(true)}
