@@ -27,8 +27,8 @@ const ImageComponent = ({ src, alt, onClick }) => {
       style={{
         position: "relative",
         cursor: "pointer",
-        minHeight: isLoaded ? "auto" : "150px",
-        background: "#767676ff",
+        minHeight: isLoaded ? "auto" : "250px",
+        background: "#424242ff",
         overflow: "hidden",
       }}
     >
@@ -41,7 +41,7 @@ const ImageComponent = ({ src, alt, onClick }) => {
             right: 0,
             bottom: 0,
             zIndex: 1,
-            backgroundColor: "#494949ff",
+            backgroundColor: "#232323ff",
             animation: "pulse 1.5s infinite",
           }}
         />
@@ -53,6 +53,7 @@ const ImageComponent = ({ src, alt, onClick }) => {
         width={0}
         height={0}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        quality={70}
         style={{
           width: "100%",
           height: "auto",
@@ -110,7 +111,7 @@ export default function Gallery({ params }) {
 
   let columnCount = 2 // Default (Mobile / XS)
   if (isLarge) {
-    columnCount = 4
+    columnCount = 3
   } else if (isMedium) {
     columnCount = 3
   } else if (isSmall) {
