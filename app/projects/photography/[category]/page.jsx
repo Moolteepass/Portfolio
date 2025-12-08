@@ -2,7 +2,9 @@
 
 import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
-import Masonry from "react-masonry-css"
+import { useTheme } from "@mui/material/styles"
+import { ImageList, ImageListItem } from "@mui/material"
+import useMediaQuery from "@mui/material/useMediaQuery"
 
 const fetchImages = async (category) => {
   try {
@@ -15,58 +17,105 @@ const fetchImages = async (category) => {
   }
 }
 
-const ImageComponent = ({ src, alt, onClick, priority, isLoading }) => {
+const ImageComponent = ({ src, alt, onClick }) => {
   const [isLoaded, setIsLoaded] = useState(false)
-  const [showImage, setShowImage] = useState(false)
-
-  useEffect(() => {
-    if (!isLoading) {
-      const timer = setTimeout(() => setShowImage(true), 100)
-      return () => clearTimeout(timer)
-    }
-  }, [isLoading])
 
   return (
-    <div className="image-item" onClick={() => !isLoading && onClick(src)}>
-      {(isLoading || !isLoaded) && <div className="skeleton-loader"></div>}
-      {showImage && (
-        <Image
-          src={src}
-          alt={alt}
-          width={400}
-          height={400}
-          priority={priority}
-          className={isLoaded ? "loaded" : ""}
-          onLoad={() => setIsLoaded(true)}
+    <div
+      className="image-item"
+      onClick={() => onClick(src)}
+      style={{
+        position: "relative",
+        cursor: "pointer",
+        minHeight: isLoaded ? "auto" : "150px",
+        background: "#767676ff",
+        overflow: "hidden",
+      }}
+    >
+      {!isLoaded && (
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 1,
+            backgroundColor: "#494949ff",
+            animation: "pulse 1.5s infinite",
+          }}
         />
       )}
+
+      <Image
+        src={src}
+        alt={alt || "Gallery image"}
+        width={0}
+        height={0}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        style={{
+          width: "100%",
+          height: "auto",
+          display: "block",
+          transition: "opacity 0.5s ease-in-out, transform 0.1s ease-in-out",
+          opacity: isLoaded ? 1 : 0,
+        }}
+        onLoad={() => setIsLoaded(true)}
+      />
     </div>
   )
 }
-
 const FullscreenImage = ({ src, alt, onClose }) => (
-  <div className="fullscreen-overlay" onClick={onClose}>
+  <div
+    className="fullscreen-overlay"
+    onClick={onClose}
+    style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      height: "100vh",
+      backgroundColor: "rgba(0,0,0,0.9)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: 9999,
+      cursor: "zoom-out",
+    }}
+  >
     <img
       src={src}
       alt={alt}
-      style={{ maxWidth: "90%", maxHeight: "90%", objectFit: "contain" }}
-      onClick={onClose}
+      style={{
+        maxWidth: "95%",
+        maxHeight: "95%",
+        objectFit: "cover",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.5)",
+      }}
     />
   </div>
 )
-
-const breakpointColumnsObj = {
-  default: 4,
-  1100: 3,
-  700: 2,
-  500: 1,
-}
 
 export default function Gallery({ params }) {
   const [images, setImages] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
   const [fullscreenImage, setFullscreenImage] = useState(null)
+
+  const theme = useTheme()
+
+  const isLarge = useMediaQuery(theme.breakpoints.up("lg"))
+  const isMedium = useMediaQuery(theme.breakpoints.up("md"))
+  const isSmall = useMediaQuery(theme.breakpoints.up("sm"))
+
+  let columnCount = 2 // Default (Mobile / XS)
+  if (isLarge) {
+    columnCount = 4
+  } else if (isMedium) {
+    columnCount = 3
+  } else if (isSmall) {
+    columnCount = 2
+  }
 
   useEffect(() => {
     const loadImages = async () => {
@@ -86,32 +135,30 @@ export default function Gallery({ params }) {
   const handleImageClick = useCallback((src) => setFullscreenImage(src), [])
   const closeFullscreen = useCallback(() => setFullscreenImage(null), [])
 
-  if (error) return <div>{error}</div>
+  if (error) return <div style={{ padding: 20, color: "red" }}>{error}</div>
+
+  if (isLoading) {
+    return <div style={{ padding: 20 }}>Loading Gallery...</div>
+  }
 
   return (
     <>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="masonry-grid"
-        columnClassName="masonry-grid_column"
-      >
-        {(isLoading ? Array(10).fill("") : images).map((url, index) => (
-          <ImageComponent
-            key={isLoading ? index : url}
-            src={url}
-            alt={`${params.category} image ${index + 1}`}
-            onClick={handleImageClick}
-            priority={index === 0}
-            isLoading={isLoading}
-          />
+      <ImageList variant="masonry" cols={columnCount} gap={0}>
+        {images.map((url, index) => (
+          <ImageListItem
+            key={index}
+            sx={{
+              breakInside: "avoid",
+              marginBottom: "8px",
+            }}
+          >
+            <ImageComponent src={url} onClick={handleImageClick} />
+          </ImageListItem>
         ))}
-      </Masonry>
+      </ImageList>
+
       {fullscreenImage && (
-        <FullscreenImage
-          src={fullscreenImage}
-          alt="Fullscreen view"
-          onClose={closeFullscreen}
-        />
+        <FullscreenImage src={fullscreenImage} onClose={closeFullscreen} />
       )}
     </>
   )

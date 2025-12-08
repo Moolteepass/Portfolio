@@ -14,7 +14,7 @@ const Slide = ({ item, isActive }) => (
     <Image
       src={item}
       alt="Carousel slide"
-      style={{ objectFit: "cover" }}
+      style={{ objectFit: "cover", objectPosition: "center 50%" }}
       height={2000}
       width={2000}
       priority
@@ -58,7 +58,7 @@ const Carousel = () => {
       setSlide((slide) => (slide === images.length - 1 ? 0 : slide + 1))
     }
 
-    const timeoutId = setTimeout(nextSlide, 4500)
+    const timeoutId = setTimeout(nextSlide, 6500)
     return () => clearTimeout(timeoutId)
   }, [images.length, slide])
 
