@@ -4,7 +4,7 @@ const videos = [
   {
     title: "CINEMATOGRAPHY SHOWREEL 2024",
     role: "Cinematographer",
-    src: "https://player.vimeo.com/video/936867710?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    src: "https://player.mediadelivery.net/embed/556542/023bf303-e66e-4362-a5d6-8a850f2d423e?autoplay=false&loop=false&muted=false&preload=true&responsive=true&transparent=true",
     tags: "SHOWREEL",
     description:
       "A collective look at all my work thus far, showcasing my skills in cinematography, colour grading and editing.",
@@ -65,11 +65,9 @@ const ProjectsVideography = () => {
           <div key={index} className="Video-Container">
             <div className="Videoplayer-Container">
               <iframe
-                width="560"
-                height="315"
                 src={item.src}
                 title={item.title}
-                allow="autoplay; fullscreen"
+                allow="fullscreen"
                 allowFullScreen
               ></iframe>
             </div>
