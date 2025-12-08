@@ -621,24 +621,20 @@ main {
   margin-bottom: 15px;
   margin-right: 20px;
   min-height: 150px;
+  min-width: 350px;
   background: rgb(46, 46, 46);
   padding: 10px;
   border-radius: 10px;
-}
-
-.Videoplayer-Container {
-  min-width: 200px;
-  max-width: 200px;
   transition: transform 0.2s ease;
 }
 
 .Videoplayer-Container:hover {
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .Videoplayer-Container iframe {
-  width: 100%;
+  width: 300px;
   height: 100%;
   border-radius: 10px;
   outline: none;
