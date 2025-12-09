@@ -13,7 +13,7 @@ const videos = [
   {
     title: "Grave",
     role: "Cinematographer, Colourist",
-    src: "https://www.youtube.com/embed/KFHPuLGV6ZQ?si=98b_FG2sZQAwDKbd",
+    src: "https://player.mediadelivery.net/embed/556542/356cd200-7e6d-41b0-a788-fedd5bd1c292?autoplay=false&loop=false&muted=false&responsive=true&transparent=true",
     tags: "SHORT FILM, WESTERN",
     description:
       "After the loss of his wife, a cowboy tries to live a life of peace and seclusion, but when old enemies come back to haunt him, he must face his past and protect his future.",
@@ -22,7 +22,7 @@ const videos = [
   {
     title: "Driver",
     role: "First Assistant Director",
-    src: "https://www.youtube.com/embed/Km8hLijau5g?si=29kiJLVo-PN4SHAr",
+    src: "https://player.mediadelivery.net/embed/556542/6153b57b-425a-44b8-b2b5-841b19fc451f?autoplay=false&loop=false&muted=false&responsive=true&transparent=true",
     tags: "SHORT FILM, DRAMA",
     description:
       "A son is forced to live in his car after a series of bills, life choices and the loss of his job. He must find a way to survive and make a living, but struggles to make ends meet.",
@@ -31,7 +31,7 @@ const videos = [
   {
     title: "Make Better.",
     role: "Cinematographer, Colourist",
-    src: "https://www.youtube.com/embed/RH2oEZaKEx4?si=iFo2ZoE5jofJQ6oU",
+    src: "https://player.mediadelivery.net/embed/556542/2fc905ec-5a0f-49d0-8b3b-b25a942437de?autoplay=false&loop=false&muted=false&responsive=true&transparent=true",
     tags: "SHORT FILM, DOCUMENTARY",
     description:
       "Rebecca Dimovski is an inspiring young photographer who uses her skill in capturing the female form to discuss the struggles that women go through simply to get a diagnosis for a lifelong chronic condition.",
@@ -40,7 +40,7 @@ const videos = [
   {
     title: "MyHaileybury Advert",
     role: "Camera Operator, Producer",
-    src: "https://www.youtube.com/embed/CDkfzczEHbo?si=poTGqJ-Rc8W5McBl",
+    src: "https://player.mediadelivery.net/embed/556542/1cbb398c-d737-42b8-a3fe-c77c68588ec8?autoplay=false&loop=false&muted=false&responsive=true&transparent=true",
     tags: "SHORT FILM, ADVERT",
     description:
       "A short advert for MyHaileybury, a school management system that helps teachers, students and parents stay connected and up to date with school life.",
@@ -49,7 +49,7 @@ const videos = [
   {
     title: "Life is Fine",
     role: "First Assistant Camera",
-    src: "https://www.youtube.com/embed/20HDBlp5_xE?si=wX9uCtfbeL_sykD3",
+    src: "https://player.mediadelivery.net/embed/556542/dcf9aabd-1fbd-4d08-852a-0bb59dc00e77?autoplay=false&loop=false&muted=false&responsive=true&transparent=true",
     tags: "SHORT FILM, DRAMA",
     description:
       "A short film about two gay lovers whos lives are thrown into chaos when one of them is diagnosed with a terminal illness. They must come to terms with the fact that their time together is limited and make the most of it.",
