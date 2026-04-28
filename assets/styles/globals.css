@@ -744,7 +744,7 @@ main {
 /* Contact styles */
 .contact-page {
   min-height: 100vh;
-  background: linear-gradient(45deg, #ffb400, #f5513c 50%, #f53d7b);
+  background: linear-gradient(45deg, #8a15c9, #3e18bc 50%, #7c15bc);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -811,7 +811,7 @@ main {
   flex-shrink: 0;
   width: 1.5rem;
   height: 1.5rem;
-  color: #e91e63;
+  color: #3e18bc;
 }
 
 .contact-item__text {
@@ -822,12 +822,12 @@ main {
 }
 
 .contact-item:hover .contact-item__text {
-  color: #e91e63;
+  color: #3e18bc;
 }
 
 /* Instagram-specific styles */
 .contact-item:nth-child(3) .contact-item__icon {
-  color: #e1306c;
+  color: #3e18bc;
 }
 
 .contact-item:nth-child(3):hover {
@@ -835,7 +835,7 @@ main {
 }
 
 .contact-item:nth-child(3):hover .contact-item__text {
-  color: #e1306c;
+  color: #3e18bc;
 }
 
 .map-card {
