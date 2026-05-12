@@ -336,7 +336,6 @@ main {
 
 .Skills-Card-Main:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
 
 .Skills-Card-Icon {
@@ -652,6 +651,7 @@ main {
   margin-top: 10px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -713,6 +713,7 @@ main {
   margin-top: 10px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
