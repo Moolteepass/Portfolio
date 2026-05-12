@@ -3,20 +3,13 @@
 /* Default styles */
 :root {
   /* Colour */
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
   /* Type */
   --defaultFont: Montserrat, sans-serif;
   /* Transition */
   --defaultScale: scale(1.1);
   --defaultSpeed: transform ease 0.15s;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -78,10 +71,8 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+html {
+  color-scheme: dark;
 }
 
 main {
@@ -338,7 +329,9 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: transform 0.2s ease, margin 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    margin 0.2s ease;
 }
 
 .Skills-Card-Main:hover {
@@ -532,7 +525,9 @@ main {
   height: auto;
   display: block;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.5s ease-in-out,
+    transform 0.3s ease-in-out;
   cursor: pointer;
 }
 
