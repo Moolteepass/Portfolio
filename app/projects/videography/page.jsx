@@ -2,7 +2,7 @@ import FadeInWrapper from "@/components/FadeInWrapper"
 
 const videos = [
   {
-    title: "CINEMATOGRAPHY SHOWREEL 2024",
+    title: "CINEMATOGRAPHY SHOWREEL 2026",
     role: "Cinematographer",
     src: "https://player.mediadelivery.net/embed/556542/023bf303-e66e-4362-a5d6-8a850f2d423e?autoplay=false&loop=false&muted=false&preload=true&responsive=true&transparent=true",
     tags: "SHOWREEL",

@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useTheme } from "@mui/material/styles"
 import { ImageList, ImageListItem } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
+import { useParams } from "next/navigation"
 
 const fetchImages = async (category) => {
   try {
@@ -97,11 +98,12 @@ const FullscreenImage = ({ src, alt, onClose }) => (
   </div>
 )
 
-export default function Gallery({ params }) {
+export default function Gallery() {
   const [images, setImages] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
   const [fullscreenImage, setFullscreenImage] = useState(null)
+  const params = useParams()
 
   const theme = useTheme()
 
